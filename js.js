@@ -35,14 +35,17 @@ wtext[0].style.animation = 'wellcomeT 1.5s linear forwards';
 		}
 		function wellOff ()  {
 			var wtext = document.getElementsByClassName('wellText');
-			var wbg = document.getElementsByClassName('wellBg');
+			
 			wtext[0].style.animation = 'wellcomeTOff 3.5s linear forwards';
-			wbg[0].style.animation = 'wbgoff 3.9s linear forwards';
+
 			setTimeout(function() {var header = document.getElementById('headerrr');
 				var body = document.getElementById('body');
+				var wbg = document.getElementsByClassName('wellBg');
 				header.style.display = 'inline-block';
 				body.style.height = 'auto';
-				body.style.overflow = 'auto';}, 3400);
+				body.style.overflow = 'auto';
+			wbg[0].style.animation = 'wbgoff 3.9s linear forwards';
+			wbg[0].style.display = 'none';}, 3400);
 			}
 		
 		
