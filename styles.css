@@ -315,13 +315,12 @@ html, body { -ms-overflow-style: none; }
 
 .bg {
     background-color: black;
-    width: 1000000000px;
+    width: 0px;
     height: 100%;
     z-index: 7;
   opacity: 0.5;
   z-index: 100;
   position: fixed;
-  display: none;
   left: 1px;
   top: 0;
 }
@@ -437,15 +436,31 @@ html, body { -ms-overflow-style: none; }
    
    }
 
-   .demo-card-wide.mdl-card {
-  width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0px;
-  margin-bottom: 140px;
-  height:auto;
-  display: none;
+   @keyframes postOn {
+  from {top: -400000px;}
+  1% {top: -4000px;}
+  2% {top: -1000px;}
+  to {top:50px;}
 }
+
+@keyframes bgOn {
+  from {width: 0px}
+  to{width: 10000px}
+}
+
+ @keyframes postOff {
+  from {top: 50px;}
+  to {top:-4000px;}
+}
+
+@keyframes bgOff {
+  from {width: 10000px}
+  to{width: 0px}
+}
+
+
+
+   
 
         @media (max-width: 767px) {
   .mdl-demo .mdl-card  {
@@ -491,6 +506,18 @@ html, body { -ms-overflow-style: none; }
 #p1 {
   top: 10000px;
 } 
+
+.demo-card-wide.mdl-card {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  margin-bottom: 140px;
+  height:auto;
+  display: none;
+}
+
+
 
 
 
