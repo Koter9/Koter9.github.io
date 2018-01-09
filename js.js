@@ -1,4 +1,14 @@
 function p () {
+	var header = document.getElementById('headerrr');
+	var body = document.getElementById('body');
+	header.style.display = 'none';
+	body.style.height = '10000px';
+	body.style.overflow = 'hidden';
+	setTimeout(wellOn, 1000);
+	setTimeout(wellOff, 3000);
+
+
+		
 	post1();
 	post2();
 	post3();
@@ -16,6 +26,26 @@ function p () {
 	post15();
 	post16();
 }
+function wellOn ()  {
+	var wtext = document.getElementsByClassName('wellText');
+var wbg = document.getElementsByClassName('wellBg');
+wtext[0].style.animation = 'wellcomeT 1.5s linear forwards';
+
+
+		}
+		function wellOff ()  {
+			var wtext = document.getElementsByClassName('wellText');
+			var wbg = document.getElementsByClassName('wellBg');
+			wtext[0].style.animation = 'wellcomeTOff 3.5s linear forwards';
+			wbg[0].style.animation = 'wbgoff 3.9s linear forwards';
+			setTimeout(function() {var header = document.getElementById('headerrr');
+				var body = document.getElementById('body');
+				header.style.display = 'inline-block';
+				body.style.height = 'auto';
+				body.style.overflow = 'auto';}, 3400);
+			}
+		
+		
 
 
 function windowOn(a) {
