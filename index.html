@@ -1,18 +1,26 @@
-<!DOCTYPE html>
+
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Koter9</title>
+    <title>Koter</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Material Design Lite">
     <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
+
     <link rel="shortcut icon" href="images/favicon.png">
 
     <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
@@ -22,434 +30,161 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" />
     <link rel="stylesheet" href="styles.css">
-    <link rel="import" href="work-1.html">
     <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
     </style>
   </head>
-  <body onload='p()' id="body" class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
-    <header id="headerrr" class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+  <body id="body" class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+
+
+
+
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header id="headerrr" class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-          <h3 >Koter9</h3>
+          <h3>Koter9</h3>
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-          <a href="#overview" class="mdl-layout__tab is-active"></a>
-<!--          <a href="#features" class="mdl-layout__tab">Features</a>-->
+          <a href="#overview" class="mdl-layout__tab is-active">Главная</a>
+          <a href="#features" class="mdl-layout__tab">Картинки</a>
+          
         </div>
       </header>
       <main class="mdl-layout__content">
-        <div style="top: 20px" class="mdl-layout__tab-panel is-active" id="overview">
+        <div class="mdl-layout__tab-panel is-active" id="overview">
+           
+
+           <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <img id="1" src="images/mainPost.jpg" class="mdl-card__title">
+            <div class="mdl-card__supporting-text">
+              Приветствую Тебя на моём сайте!
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a href="#1" onclick="windowOn('a1')" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Можешь нажать
+              </a>
+            </div>
+          </div>
+            <div id="a1" class="window" >
+            <img class="windowImg" src="images/mainPost.jpg" >
+            <i class="fa fa-times fa-lg" onclick="windowOff('a1')" ></i>
+            <div class="windowText" ><em>Привет!</em> Ты один из первых, кто сюда зашёл. Здесь пока пусто, но благодаря <em>Тебе</em>, всё изменится! Ты можешь заказать у меня <em>сайт или его дизайн</em>, и я размещу его тут. </div>
+            <div id="windowOrderButtons" >
+                <a id="f2" class="windowOrderButtonTelegram" target="_blank" href="https://freelancehunt.com/freelancer/Koter9.html">Freelancehunt </a>
+                <a id="f2" class="windowOrderButtonFrelanchat" target="_blank" href="https://t.me/Koter9">Telegram </a>
+            </div>
+          </div>
 
 
-          
+          <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <img id="2" src="images/zakaz.png" class="mdl-card__title">
+            <div class="mdl-card__supporting-text">
+              Приветствую Тебя на моём сайте!
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a href="#1" onclick="windowOn('a2')" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Можешь нажать
+              </a>
+            </div>
+          </div>
+            <div id="a2" class="window" >
+            <img class="windowImg" src="images/zakaz.png" >
+            <i class="fa fa-times fa-lg" onclick="windowOff('a2')" ></i>
+            <div class="windowText" > <em>Привет</em></div>
+            <div id="windowOrderButtons" >
+                <a id="f2" class="windowOrderButtonTelegram" target="_blank" href="https://freelancehunt.com/freelancer/Koter9.html">Freelancehunt </a>
+                <a id="f2" class="windowOrderButtonFrelanchat" target="_blank" href="https://t.me/Koter9">Telegram </a>
+            </div>
+          </div>
 
 
-      <div class="wellcom">
-        <div class="textbox">
-        <div class="wellText">Привет</div>
+
+        <div class="bg"></div>
         </div>
-      </div>
-          <div onclick="wellBg()" class="wellBg"></div>
-
-
-          
-
-
-          
 
 
 
-
-          
-
-
-          
-
-
-          
+        <div class="mdl-layout__tab-panel" id="features">
+          <section class="section--center mdl-grid mdl-grid--no-spacing">
+            <div class="mdl-cell mdl-cell--12-col">
+              
 
 
-         
 
+              <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <img src="images/forest2.png" class="mdl-card__title">
+            <div class="mdl-card__supporting-text">
+              forest.jpg
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a href="images/forest2.png" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Можешь нажать
+              </a>
+            </div>
+          </div>
+
+          <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <img src="images/mount.jpg" class="mdl-card__title">
+            <div class="mdl-card__supporting-text">
+              mounts.jpg
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a href="images/mount.jpg" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Можешь нажать
+              </a>
+            </div>
+          </div>
+
+          <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+            <img src="images/фаервотч_4.jpg" class="mdl-card__title">
+            <div class="mdl-card__supporting-text">
+              landscape.jpg
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a href="images/фаервотч_4.jpg" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Можешь нажать
+              </a>
+            </div>
+          </div>
 
         
 
 
 
-          
 
 
-
-          
-
-
-
-          
-
-
-
-          
-
-
-
-          
-
-
-
-          <div style="margin-bottom: -300px;" id="1p" >
-            <img id="1" >
-            <div id="1t" >
             </div>
-            <div id="11">
-              <a id="1b" href="#1" onclick="windowOn('a1')">
-              </a>
-            </div>
-          </div>
-            <div  id="a1" >
-            <img  id="wp1" >
-            <i id="close1" onclick="windowOff('a1')" ></i>
-            <div id="wt1" ></div>
-            <div id="ob1" >
-                <a id="f1" "> </a>
-                <a id="t1" "></a>
-            </div>
-          </div>
-
-
-
-          <div id="15p" >
-            <img id="15" >
-            <div id="15t" >
-            </div>
-            <div id="1515">
-              <a id="15b" href="#15" onclick="windowOn('a15')">
-              </a>
-            </div>
-          </div>
-            <div  id="a15" >
-            <img  id="wp15" >
-            <i id="close15" onclick="windowOff('a15')" ></i>
-            <div id="wt15" ></div>
-            <div id="ob15" >
-                <a id="f15" "></a>
-                <a id="t15" "></a>
-            </div>
-          </div>
-
-          <div id="14p" >
-            <img id="14" >
-            <div id="14t" >
-            </div>
-            <div id="1414">
-              <a id="14b" href="#14" onclick="windowOn('a14')">
-              </a>
-            </div>
-          </div>
-            <div  id="a14" >
-            <img  id="wp14" >
-            <i id="close14" onclick="windowOff('a14')" ></i>
-            <div id="wt14" ></div>
-            <div id="ob14" >
-                <a id="f14" "></a>
-                <a id="t14" "></a>
-            </div>
-          </div>
-
-          <div id="13p" >
-            <img id="13" >
-            <div id="13t" >
-            </div>
-            <div id="1313">
-              <a id="13b" href="#13" onclick="windowOn('a13')">
-            </div>
-          </div>
-            <div  id="a13" >
-            <img  id="wp13" >
-            <i id="close13" onclick="windowOff('a13')" ></i>
-            <div id="wt13" ></div>
-            <div id="ob13" >
-                <a id="f13" "></a>
-                <a id="t13" "></a>
-            </div>
-          </div>
-
-          <div id="12p" >
-            <img id="12" >
-            <div id="12t" >
-            </div>
-            <div id="1212">
-              <a id="12b" href="#12" onclick="windowOn('a12')">
-              </a>
-            </div>
-          </div>
-            <div  id="a12" >
-            <img  id="wp12" >
-            <i id="close12" onclick="windowOff('a12')" ></i>
-            <div id="wt12" ></div>
-            <div id="ob12" >
-                <a id="f12" "></a>
-                <a id="t12" "></a>
-            </div>
-          </div>
-
-          <div id="11p" >
-            <img id="11" >
-            <div id="11t" >
-            </div>
-            <div id="1111">
-              <a id="11b" href="#11" onclick="windowOn('a11')">
-              </a>
-            </div>
-          </div>
-            <div  id="a11" >
-            <img  id="wp11" >
-            <i id="close11" onclick="windowOff('a11')" ></i>
-            <div id="wt11" ></div>
-            <div id="ob11" >
-                <a id="f11" "></a>
-                <a id="t11" "></a>
-            </div>
-          </div>
-
-          <div id="10p" >
-            <img id="10" >
-            <div id="10t" >
-            </div>
-            <div id="1010">
-              <a id="10b" href="#10" onclick="windowOn('a10')">
-              </a>
-            </div>
-          </div>
-            <div  id="a10" >
-            <img  id="wp10" >
-            <i id="close10" onclick="windowOff('a10')" ></i>
-            <div id="wt10" ></div>
-            <div id="ob10" >
-                <a id="f10" "> </a>
-                <a id="t10" "></a>
-            </div>
-          </div>
-
-          <div id="9p" >
-            <img id="9" >
-            <div id="9t" >
-            </div>
-            <div id="99">
-              <a id="9b" href="#9" onclick="windowOn('a9')">
-              </a>
-            </div>
-          </div>
-            <div  id="a9" >
-            <img  id="wp9" >
-            <i id="close9" onclick="windowOff('a9')" ></i>
-            <div id="wt9" ></div>
-            <div id="ob9" >
-                <a id="f9" "></a>
-                <a id="t9" "></a>
-            </div>
-          </div>
-
-
-
-
-          <div id="8p" >
-            <img id="8" >
-            <div id="8t" >
-            </div>
-            <div id="88">
-              <a id="8b" href="#8" onclick="windowOn('a8')">
-              </a>
-            </div>
-          </div>
-            <div  id="a8" >
-            <img  id="wp8" >
-            <i id="close8" onclick="windowOff('a8')" ></i>
-            <div id="wt8" ></div>
-            <div id="ob8" >
-                <a id="f8" "></a>
-                <a id="t8" "></a>
-            </div>
-          </div>
-
-           <div id="7p" >
-            <img id="7" >
-            <div id="7t" >
-            </div>
-            <div id="77">
-              <a id="7b" href="#7" onclick="windowOn('a7')"2>
-              </a>
-            </div>
-          </div>
-            <div  id="a7" >
-            <img  id="wp7" >
-            <i id="close7" onclick="windowOff('a7')" ></i>
-            <div id="wt7" ></div>
-            <div id="ob7" >
-                <a id="f7" "></a>
-                <a id="t7" "></a>
-            </div>
-          </div>
-
-          <div id="6p" >
-            <img id="6" >
-            <div id="6t" >
-            </div>
-            <div id="66">
-              <a id="6b" href="#6" onclick="windowOn('a6')"2>
-              </a>
-            </div>
-          </div>
-            <div  id="a6" >
-            <img  id="wp6" >
-            <i id="close6" onclick="windowOff('a6')" ></i>
-            <div id="wt6" ></div>
-            <div id="ob6" >
-                <a id="f6" "> </a>
-                <a id="t6" "></a>
-            </div>
-          </div>
-
-          <div id="5p" >
-            <img id="5" >
-            <div id="5t" >
-            </div>
-            <div id="55">
-              <a id="5b" href="#5" onclick="windowOn('a5')"2>
-              </a>
-            </div>
-          </div>
-            <div  id="a5" >
-            <img  id="wp5" >
-            <i id="close5" onclick="windowOff('a5')" ></i>
-            <div id="wt5" ></div>
-            <div id="ob5" >
-                <a id="f5" "></a>
-                <a id="t5" "></a>
-            </div>
-          </div>
-
-
-  <div id="4p" >
-            <img id="4" >
-            <div id="4t" >
-            </div>
-            <div id="44">
-              <a id="4b" href="#4" onclick="windowOn('a4')"2>
-              </a>
-            </div>
-          </div>
-            <div  id="a4" >
-            <img  id="wp4" >
-            <i id="close4" onclick="windowOff('a4')" ></i>
-            <div id="wt4" ></div>
-            <div id="ob4" >
-                <a id="f4" "> </a>
-                <a id="t4" "></a>
-            </div>
-          </div>
-
-          <div id="3p" >
-            <img id="3" >
-            <div id="3t" >
-            </div>
-            <div id="33">
-              <a id="3b" href="#3" onclick="windowOn('a3')" >
-              </a>
-            </div>
-          </div>
-            <div  id="a3" >
-            <img  id="wp3" >
-            <i id="close3" onclick="windowOff('a3')" ></i>
-            <div id="wt3" ></div>
-            <div id="ob3" >
-                <a id="f3" "> </a>
-                <a id="t3" "></a>
-            </div>
-          </div>
-
-          <div id="2p" >
-            <img id="2" >
-            <div id="2t" >
-            </div>
-            <div id="22">
-              <a id="2b" href="#2" onclick="windowOn('a2')">
-              </a>
-            </div>
-          </div>
-            <div  id="a2" >
-            <img  id="wp2" >
-            <i id="close2" onclick="windowOff('a2')" ></i>
-            <div id="wt2" ></div>
-            <div id="ob2" >
-                <a id="f2" "> </a>
-                <a id="t2" "></a>
-            </div>
-          </div>
-
-
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <!--
-          <div class="demo-card-wide mdl-card mdl-shadow--2dp">
-            <img id="2" src="images/mount.jpg" class="mdl-card__title">
-            <div class="mdl-card__supporting-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Mauris sagittis pellentesque lacus eleifend lacinia...
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-              <a href="#2" onclick="windowOn('a2')" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                Get Started
-              </a>
-            </div>
-          </div>
-          -->
-
-          <div class="bg"></div>
+          </section>
         </div>
-          
-                  <!--<div class="mdl-layout__tab-panel" id="features"></div>-->
-          
         <footer class="mdl-mega-footer">
+          <footer class="mdl-mega-footer">
           <div class="footerCenter">
           <div class="footerTittle">Спасибо, что долистал до сюда.</div>
           </div>
         </footer>
+        </footer>
       </main>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    </div>
+    
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="bootstrap.min.js"></script>
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="js.js"></script>
-    <script src="js1.js"></script>
-    <script src="js2.js"></script>
-    <script src="js3.js"></script>
-    <script src="js4.js"></script>
-    <script src="js5.js"></script>
-    <script src="js6.js"></script>
-    <script src="js7.js"></script>
-    <script src="js8.js"></script>
-    <script src="js9.js"></script>
     <script src="https://use.fontawesome.com/638278cc1a.js"></script>
   </body>
-<!DOCTYPE>
+</html>
