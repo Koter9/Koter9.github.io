@@ -2,32 +2,53 @@ function p () {
 	var header = document.getElementById('headerrr');
 	var body = document.getElementById('body');
 	header.style.display = 'none';
-	body.style.height = '10000px';
+	body.style.height = '100000px';
 	body.style.overflow = 'hidden';
-	setTimeout(wellOn, 1000);
-	setTimeout(wellOff, 3000);
+	setTimeout(wellOn, 500);
+	setTimeout(wellOff, 5000);
+	
 
 
 }
+	
+function wellOn() {
 
-		function wellOff ()  {
-			var wtext = document.getElementsByClassName('wellText');
-			
-			wtext[0].style.animation = 'wellcomeTOff 3.5s linear forwards';
-
-			setTimeout(function() {var header = document.getElementById('headerrr');
-				var body = document.getElementById('body');
-				var wbg = document.getElementsByClassName('wellBg');
-				header.style.display = 'inline-block';
-				body.style.height = 'auto';
-				body.style.overflow = 'auto';
-			wbg[0].style.animation = 'wbgoff 3.9s linear forwards';
-			wbg[0].style.display = 'none';}, 3400);
-			}
+		var wellCome = document.getElementsByClassName('wellCome');
+		var wellText = document.getElementsByClassName('wellText');
+		wellText[0].style.animation = 'wellcomeT 0.5s linear forwards';
 		
+	
+}
+
+
+function wellOff() {
+	var wellCome = document.getElementsByClassName('wellCome');
+	var wellBg = document.getElementsByClassName('wellBg');
+		var wellText = document.getElementsByClassName('wellText');
+		var header = document.getElementById('headerrr');
+	var body = document.getElementById('body');
+	header.style.display = 'inline-block';
 		
+		wellText[0].style.animation = 'wellcomeTOff 0.5s linear forwards';
+		
+					
 
+	wellBg[0].style.animation = 'wellcomeOff 1.5s linear forwards'
+	
 
+		setTimeout(function() {
+					var wellCome = document.getElementsByClassName('wellCome');
+					var wellBg = document.getElementsByClassName('wellBg');
+					var body = document.getElementById('body');					
+					wellCome[0].style.display = 'none'
+					body.style.height = 'auto';
+					body.style.overflow = 'auto';
+					setTimeout(function() {wellBg[0].style.display = 'none'}, 400);
+					
+				}, 900);
+
+}
+	
 function windowOn(a) {
 	var wind = document.getElementById(a);
 	var body = document.getElementById('body');
@@ -58,3 +79,17 @@ function windowOff(a) {
 
 
 
+// wellText[0].style.animation = 'wellcomeTOff 0.5s linear forwards';
+		
+// 	wellBg[0].style.animation = 'wellcomeOff 4 linear forwards'
+	
+
+// 		setTimeout(function() {
+// 					var wellCome = document.getElementsByClassName('wellCome');
+// 					var wellBg = document.getElementsByClassName('wellBg');
+// 					var body = document.getElementById('body');
+// 					wellCome[0].style.display = 'none'
+// 					body.style.height = 'auto';
+// 					body.style.overflow = 'auto';
+// 					wellBg[0].style.animation = 'wellcomeOff 4 linear forwards'
+// 				}, 900);
